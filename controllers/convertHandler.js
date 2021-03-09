@@ -132,12 +132,12 @@ function ConvertHandler() {
     } else {
       convertedResult = "invalid unit";
     }
-    return convertedResult;
+    return convertedResult.toFixed(5);
   };
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
     let result;
-    result = "string";
+    // result = "string";
     return result;
   };
 }

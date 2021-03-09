@@ -27,6 +27,7 @@ module.exports = function (app) {
       returnUnit
     );
 
+    let responseObject = {};
     if (input !== "")
       if (initNum == "invalid number" && initUnit == "invalid unit") {
         res.send("invalid number and unit");
@@ -35,13 +36,12 @@ module.exports = function (app) {
       } else if (initUnit == "invalid unit") {
         res.send("invalid unit");
       } else {
-        return res.json({
-          initNum: initNum,
-          initUnit: initUnit,
-          returnNum: returnNum,
-          returnUnit: returnUnit,
-          toString: toString,
-        });
+        responseObject["initNum"] = initNum;
+        responseObject["initUnit"] = initUnit;
+        responseObject["returnNum"] = returnNum;
+        responseObject["returnUnit"] = returnUnit;
+        responseObject["toString"] = toString;
+        res.json(responseObject);
       }
   });
 };
