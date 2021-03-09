@@ -136,17 +136,8 @@ function ConvertHandler() {
   };
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
-    let spellOutInit = this.spellOutUnit(initUnit);
-    let spellOutReturn = this.spellOutUnit(returnUnit);
     let result;
-    // result =
-    //   initNum +
-    //   " " +
-    //   spellOutInIt +
-    //   " converts to " +
-    //   returnNum +
-    //   " " +
-    //   spellOutReturn;
+    result = "string";
     return result;
   };
 }
