@@ -136,15 +136,17 @@ function ConvertHandler() {
   };
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
+    let spellOutInit = this.spellOutUnit(initUnit);
+    let spellOutReturn = this.spellOutUnit(returnUnit);
     let result;
     // result =
     //   initNum +
     //   " " +
-    //   this.spellOutUnit(initUnit) +
+    //   spellOutInIt +
     //   " converts to " +
     //   returnNum +
     //   " " +
-    //   this.spellOutUnit(returnUnit);
+    //   spellOutReturn;
     return result;
   };
 }

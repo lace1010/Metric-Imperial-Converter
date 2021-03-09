@@ -26,14 +26,22 @@ module.exports = function (app) {
       returnNum,
       returnUnit
     );
+
     if (input !== "")
-      return res.json({
-        initNum: initNum,
-        initUnit: initUnit,
-        returnNum: returnNum,
-        returnUnit: returnUnit,
-        toString: toString,
-      });
-    //res.json
+      if (initNum == "invalid number" && initUnit == "invalid unit") {
+        res.send("invalid number and unit");
+      } else if (initNum == "invalid number") {
+        res.send("invalid number");
+      } else if (initUnit == "invalid unit") {
+        res.send("invalid unit");
+      } else {
+        return res.json({
+          initNum: initNum,
+          initUnit: initUnit,
+          returnNum: returnNum,
+          returnUnit: returnUnit,
+          toString: toString,
+        });
+      }
   });
 };
