@@ -132,7 +132,8 @@ function ConvertHandler() {
     } else {
       convertedResult = "invalid unit";
     }
-    return convertedResult.toFixed(5);
+
+    return parseFloat(convertedResult.toFixed(5));
   };
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
