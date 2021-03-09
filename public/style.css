@@ -1,7 +1,84 @@
-code {
-    background-color: whitesmoke;
+body {
+  color: white;
+  text-shadow: 1px 1px 8px #123456;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(34, 76, 152, 1) 0%,
+      rgba(31, 48, 94, 0.6) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(34, 76, 152, 0.4) 0%,
+      rgba(31, 48, 94, 0.5) 5%,
+      transparent 5%,
+      transparent 10%
+    );
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-section, header {
-    margin: 50px;
+h1 {
+  font-size: 38px;
+}
+#converter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#convertForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  height: 125px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+#convertField {
+  border: 1.5px solid rgba(34, 76, 152, 1);
+  border-radius: 5px;
+  width: 300px;
+  font-size: 20px;
+}
+#convert-button {
+  background-color: rgb(34, 76, 152);
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+#result {
+  font-size: 30px;
+}
+
+#jsonResult {
+  background-color: whitesmoke;
+  color: black;
+  text-shadow: none;
+  font-size: 16px;
+  width: 100px;
+}
+
+footer {
+  margin-top: 15px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: blue;
 }
