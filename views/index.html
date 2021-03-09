@@ -48,7 +48,7 @@
             type: 'get',
             data: $('#convertForm').serialize(),
             success: function(data) {
-              $('#result').text(JSON.stringify(data.toString) || data);
+              $('#result').text(JSON.stringify(data.string) || data);
               $('#jsonResult').text(JSON.stringify(data));
             }
           });

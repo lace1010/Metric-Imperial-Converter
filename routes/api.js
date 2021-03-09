@@ -40,7 +40,7 @@ module.exports = function (app) {
         responseObject["initUnit"] = initUnit;
         responseObject["returnNum"] = returnNum;
         responseObject["returnUnit"] = returnUnit;
-        responseObject["toString"] = toString;
+        responseObject["string"] = toString;
         res.json(responseObject);
       }
   });
