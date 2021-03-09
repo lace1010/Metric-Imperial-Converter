@@ -56,7 +56,7 @@ function ConvertHandler() {
     }
   };
 
-  this.getReturnUnit = function (initUnit) {
+  this.getReturnUnit = (initUnit) => {
     let result;
     switch (initUnit) {
       case "gal":
@@ -112,7 +112,7 @@ function ConvertHandler() {
     return spelledOutResult;
   };
 
-  this.convert = function (initNum, initUnit) {
+  this.convert = (initNum, initUnit) => {
     const galToL = 3.78541;
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
@@ -143,7 +143,9 @@ function ConvertHandler() {
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
     let result;
-    // result = "string";
+    let SOInitUnit = this.spellOutUnit(initUnit);
+    let SOReturnUnit = this.spellOutUnit(returnUnit);
+    result = `${initNum} ${SOInitUnit} converts to ${returnNum} ${SOReturnUnit}`;
     return result;
   };
 }
