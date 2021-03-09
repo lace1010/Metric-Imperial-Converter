@@ -116,7 +116,7 @@ function ConvertHandler() {
     const miToKm = 1.60934;
     let convertedResult;
 
-    if (initUnit == "gal") {
+    if (initUnit == "gal" || initUnit == "GAL") {
       // Converts gal to L
       convertedResult = initNum * galToL;
     } else if (initUnit == "L" || initUnit == "l") {
