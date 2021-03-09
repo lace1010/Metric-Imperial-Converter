@@ -40,7 +40,7 @@ h1 {
   width: 450px;
   height: 125px;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 #convertField {
@@ -68,7 +68,8 @@ h1 {
   color: black;
   text-shadow: none;
   font-size: 16px;
-  width: 100px;
+  width: 600px;
+  word-wrap: break-word;
 }
 
 footer {
