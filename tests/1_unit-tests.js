@@ -70,7 +70,7 @@ suite("Unit Tests", () => {
       input.forEach((ele) => {
         assert.equal(
           convertHandler.getUnit(ele),
-          ele == "l" ? ele.toUpperCase() : ele.toLowerCase()
+          ele == "l" || ele == "L" ? ele.toUpperCase() : ele.toLowerCase()
         );
       });
       done();
