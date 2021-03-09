@@ -48,7 +48,9 @@ function ConvertHandler() {
     ];
     if (arrayOfUnits.indexOf(unit) > -1) {
       // If unit is l for liter change to uppercase otherwise change to lowercase
-      return unit == "l" ? unit.toUpperCase() : unit.toLowerCase();
+      return unit == "l" || unit == "L"
+        ? unit.toUpperCase()
+        : unit.toLowerCase();
     } else {
       return "invalid unit";
     }
