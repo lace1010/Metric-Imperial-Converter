@@ -115,6 +115,7 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
     let convertedResult;
+    let invalidResult = false;
 
     if (initUnit == "gal" || initUnit == "GAL") {
       // Converts gal to L
@@ -130,10 +131,12 @@ function ConvertHandler() {
     } else if (initUnit == "km") {
       convertedResult = initNum / miToKm;
     } else {
-      convertedResult = "invalid unit";
+      invalidResult = "invalid unit";
     }
 
-    return parseFloat(convertedResult.toFixed(5));
+    return invalidResult
+      ? invalidResult
+      : parseFloat(convertedResult.toFixed(5));
   };
 
   this.getString = (initNum, initUnit, returnNum, returnUnit) => {
